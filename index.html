@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competitive Essay Writing — Master Course Blueprint</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1B2D;
+    --navy-mid: #1A2E4A;
+    --navy-light: #243D5C;
+    --gold: #F5A623;
+    --gold-light: #FBBF5A;
+    --mint: #4ECDC4;
+    --coral: #E8614A;
+    --cream: #FDF6E3;
+    --cream-dark: #F2E8C9;
+    --white: #FFFFFF;
+    --text-dark: #0F1B2D;
+    --text-mid: #3D5A7A;
+    --text-light: #7A9BBF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0F1B2D 0%, #1A2E4A 50%, #0F2A1A 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 40%, rgba(245,166,35,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 60%, rgba(78,205,196,0.05) 0%, transparent 60%);
+    animation: breathe 8s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  .hero-badge {
+    background: rgba(245,166,35,0.15);
+    border: 1px solid rgba(245,166,35,0.4);
+    color: var(--gold);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: clamp(18px, 3vw, 28px);
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 30px;
+    direction: rtl;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-sub {
+    font-size: clamp(14px, 2vw, 18px);
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Journey Promise */
+  .promise-strip {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px 30px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .promise-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 80px;
+  }
+
+  .promise-node .icon {
+    font-size: 28px;
+  }
+
+  .promise-node .label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    line-height: 1.3;
+    max-width: 70px;
+  }
+
+  .promise-arrow {
+    color: var(--gold);
+    font-size: 20px;
+    margin: 0 6px;
+    opacity: 0.6;
+    margin-top: -20px;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.3);
+    font-size: 12px;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ── SECTION SHELL ── */
+  .section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .section-title span { color: var(--gold); }
+
+  .section-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,166,35,0.3), transparent);
+    margin: 0;
+  }
+
+  /* ── TRANSFORMATION: START vs END ── */
+  .transform-section {
+    background: linear-gradient(180deg, var(--navy) 0%, #0A1520 100%);
+    padding: 80px 20px;
+  }
+
+  .transform-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .transform-card {
+    border-radius: 20px;
+    padding: 36px 28px;
+  }
+
+  .transform-card.before {
+    background: rgba(232,97,74,0.08);
+    border: 1px solid rgba(232,97,74,0.25);
+  }
+
+  .transform-card.after {
+    background: rgba(78,205,196,0.08);
+    border: 1px solid rgba(78,205,196,0.3);
+  }
+
+  .transform-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .transform-card.before h3 { color: var(--coral); }
+  .transform-card.after h3 { color: var(--mint); }
+
+  .transform-list { list-style: none; }
+
+  .transform-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .transform-list li .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .before .dot { background: var(--coral); }
+  .after .dot { background: var(--mint); }
+
+  .transform-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .arrow-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), #E8940A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 0 40px rgba(245,166,35,0.3);
+    animation: pulse-gold 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 40px rgba(245,166,35,0.3); }
+    50% { box-shadow: 0 0 60px rgba(245,166,35,0.5); }
+  }
+
+  .arrow-label {
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  /* ── SLOs ── */
+  .slo-section {
+    background: #0A1520;
+    padding: 80px 20px;
+  }
+
+  .slo-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .slo-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .slo-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245,166,35,0.3);
+  }
+
+  .slo-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .slo-card.c1::before { background: var(--gold); }
+  .slo-card.c2::before { background: var(--mint); }
+  .slo-card.c3::before { background: var(--coral); }
+  .slo-card.c4::before { background: #A78BFA; }
+  .slo-card.c5::before { background: #34D399; }
+  .slo-card.c6::before { background: #60A5FA; }
+
+  .slo-icon { font-size: 32px; margin-bottom: 14px; }
+
+  .slo-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .slo-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  .slo-card .urdu-note {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    direction: rtl;
+    margin-top: 10px;
+    display: block;
+  }
+
+  /* ── HOW YOU WILL LEARN ── */
+  .delivery-section {
+    background: linear-gradient(180deg, #0A1520 0%, var(--navy) 100%);
+    padding: 80px 20px;
+  }
+
+  .delivery-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .delivery-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  .delivery-card:hover { background: rgba(255,255,255,0.06); }
+
+  .delivery-card .d-icon { font-size: 36px; margin-bottom: 12px; }
+
+  .delivery-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .delivery-card p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  /* Weekly rhythm */
+  .rhythm-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(245,166,35,0.05);
+    border: 1px solid rgba(245,166,35,0.2);
+    border-radius: 20px;
+    padding: 36px;
+  }
+
+  .rhythm-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .rhythm-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .rhythm-row:last-child { border-bottom: none; }
+
+  .rhythm-day {
+    width: 90px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+
+  .rhythm-action {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .rhythm-tag {
+    margin-left: auto;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .tag-wa { background: rgba(37,211,102,0.15); color: #25D366; }
+  .tag-gf { background: rgba(78,205,196,0.15); color: var(--mint); }
+  .tag-gc { background: rgba(66,133,244,0.15); color: #4285F4; }
+  .tag-fb { background: rgba(245,166,35,0.15); color: var(--gold); }
+
+  /* ── COURSE PHASES ── */
+  .phases-section {
+    background: var(--navy);
+    padding: 80px 20px;
+  }
+
+  .phase-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .phase-block {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: start;
+  }
+
+  .phase-meta {
+    position: sticky;
+    top: 30px;
+  }
+
+  .phase-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .ph0 .phase-badge { background: rgba(167,139,250,0.15); color: #A78BFA; }
+  .ph1 .phase-badge { background: rgba(245,166,35,0.15); color: var(--gold); }
+  .ph2 .phase-badge { background: rgba(78,205,196,0.15); color: var(--mint); }
+  .ph3 .phase-badge { background: rgba(232,97,74,0.15); color: var(--coral); }
+  .ph4 .phase-badge { background: rgba(52,211,153,0.15); color: #34D399; }
+
+  .phase-meta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .phase-meta .phase-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .phase-meta .phase-goal {
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .ph0 .phase-goal { background: rgba(167,139,250,0.08); border-left: 3px solid #A78BFA; color: rgba(255,255,255,0.6); }
+  .ph1 .phase-goal { background: rgba(245,166,35,0.08); border-left: 3px solid var(--gold); color: rgba(255,255,255,0.6); }
+  .ph2 .phase-goal { background: rgba(78,205,196,0.08); border-left: 3px solid var(--mint); color: rgba(255,255,255,0.6); }
+  .ph3 .phase-goal { background: rgba(232,97,74,0.08); border-left: 3px solid var(--coral); color: rgba(255,255,255,0.6); }
+  .ph4 .phase-goal { background: rgba(52,211,153,0.08); border-left: 3px solid #34D399; color: rgba(255,255,255,0.6); }
+
+  .phase-content { display: flex; flex-direction: column; gap: 16px; }
+
+  /* Unit card */
+  .unit-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .unit-card:hover {
+    border-color: rgba(245,166,35,0.25);
+    transform: translateX(4px);
+  }
+
+  .unit-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 22px;
+    cursor: pointer;
+  }
+
+  .unit-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .ph0 .unit-num { background: rgba(167,139,250,0.2); color: #A78BFA; }
+  .ph1 .unit-num { background: rgba(245,166,35,0.2); color: var(--gold); }
+  .ph2 .unit-num { background: rgba(78,205,196,0.2); color: var(--mint); }
+  .ph3 .unit-num { background: rgba(232,97,74,0.2); color: var(--coral); }
+  .ph4 .unit-num { background: rgba(52,211,153,0.2); color: #34D399; }
+
+  .unit-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    flex: 1;
+  }
+
+  .unit-title .urdu-small {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    direction: rtl;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .unit-body {
+    padding: 0 22px 18px 72px;
+  }
+
+  .lesson-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .step-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  .step-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+  /* Phase connector line */
+  .phase-connector {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 10px 0 50px 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .connector-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  }
+
+  .connector-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* ── IDBCC FRAMEWORK VISUAL ── */
+  .framework-section {
+    background: #060D18;
+    padding: 80px 20px;
+  }
+
+  .idbcc-visual {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .idbcc-visual::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    bottom: 50px;
+    width: 2px;
+    background: linear-gradient(180deg, #A78BFA, var(--gold), var(--mint), var(--coral), #34D399);
+    border-radius: 2px;
+  }
+
+  .idbcc-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .idbcc-letter {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 900;
+    background: var(--navy);
+    border: 2px solid;
+    flex-shrink: 0;
+  }
+
+  .idbcc-card {
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+
+  .idbcc-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .idbcc-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.7;
+  }
+
+  .idbcc-card .parts {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .part-tag {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* I */
+  .row-i .idbcc-letter { border-color: #A78BFA; color: #A78BFA; }
+  .row-i .idbcc-card { background: rgba(167,139,250,0.07); border: 1px solid rgba(167,139,250,0.2); }
+  .row-i .idbcc-card h4 { color: #A78BFA; }
+
+  /* D */
+  .row-d .idbcc-letter { border-color: var(--gold); color: var(--gold); }
+  .row-d .idbcc-card { background: rgba(245,166,35,0.07); border: 1px solid rgba(245,166,35,0.2); }
+  .row-d .idbcc-card h4 { color: var(--gold); }
+
+  /* B */
+  .row-b .idbcc-letter { border-color: var(--mint); color: var(--mint); }
+  .row-b .idbcc-card { background: rgba(78,205,196,0.07); border: 1px solid rgba(78,205,196,0.2); }
+  .row-b .idbcc-card h4 { color: var(--mint); }
+
+  /* C1 */
+  .row-c1 .idbcc-letter { border-color: var(--coral); color: var(--coral); }
+  .row-c1 .idbcc-card { background: rgba(232,97,74,0.07); border: 1px solid rgba(232,97,74,0.2); }
+  .row-c1 .idbcc-card h4 { color: var(--coral); }
+
+  /* C2 */
+  .row-c2 .idbcc-letter { border-color: #34D399; color: #34D399; }
+  .row-c2 .idbcc-card { background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.2); }
+  .row-c2 .idbcc-card h4 { color: #34D399; }
+
+  /* 9 sub-parts diagram */
+  .nine-parts {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .nine-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 18px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nine-card::after {
+    content: attr(data-part);
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+  }
+
+  .nine-card .n-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .nine-card h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .nine-card p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.4;
+  }
+
+  .np-i { border-top: 2px solid #A78BFA; }
+  .np-i .n-num { color: #A78BFA; }
+  .np-d { border-top: 2px solid var(--gold); }
+  .np-d .n-num { color: var(--gold); }
+  .np-b { border-top: 2px solid var(--mint); }
+  .np-b .n-num { color: var(--mint); }
+  .np-c1 { border-top: 2px solid var(--coral); }
+  .np-c1 .n-num { color: var(--coral); }
+  .np-c2 { border-top: 2px solid #34D399; }
+  .np-c2 .n-num { color: #34D399; }
+
+  /* ── ESSAY TYPES ── */
+  .essay-types {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+
+  .essay-type-card {
+    border-radius: 16px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .essay-type-card::before {
+    content: attr(data-type);
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 80px;
+    opacity: 0.04;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .et-arg { background: rgba(245,166,35,0.07); border: 1px solid rgba(245,166,35,0.2); }
+  .et-desc { background: rgba(78,205,196,0.07); border: 1px solid rgba(78,205,196,0.2); }
+  .et-narr { background: rgba(167,139,250,0.07); border: 1px solid rgba(167,139,250,0.2); }
+  .et-refl { background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.2); }
+
+  .et-arg h4 { color: var(--gold); }
+  .et-desc h4 { color: var(--mint); }
+  .et-narr h4 { color: #A78BFA; }
+  .et-refl h4 { color: #34D399; }
+
+  .essay-type-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .essay-type-card .et-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    direction: rtl;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .essay-type-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .et-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .et-tag {
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: 11px;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.5);
+  }
+
+  .teach-order {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 24px 30px;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .teach-order-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .to-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .to-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .to-label { font-size: 11px; color: rgba(255,255,255,0.45); }
+
+  .to-arr { color: rgba(255,255,255,0.2); font-size: 20px; }
+
+  /* ── SCORING ── */
+  .scoring-section {
+    background: #060D18;
+    padding: 80px 20px;
+  }
+
+  .scoring-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .score-card {
+    border-radius: 16px;
+    padding: 28px 24px;
+  }
+
+  .score-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .score-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .score-bar-bg {
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  .score-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  .sc-content { background: rgba(245,166,35,0.07); border: 1px solid rgba(245,166,35,0.2); }
+  .sc-content h4, .sc-content .score-pct { color: var(--gold); }
+  .sc-content .score-bar-fill { background: var(--gold); width: 30%; }
+
+  .sc-lang { background: rgba(78,205,196,0.07); border: 1px solid rgba(78,205,196,0.2); }
+  .sc-lang h4, .sc-lang .score-pct { color: var(--mint); }
+  .sc-lang .score-bar-fill { background: var(--mint); width: 30%; }
+
+  .sc-org { background: rgba(167,139,250,0.07); border: 1px solid rgba(167,139,250,0.2); }
+  .sc-org h4, .sc-org .score-pct { color: #A78BFA; }
+  .sc-org .score-bar-fill { background: #A78BFA; width: 25%; }
+
+  .sc-orig { background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.2); }
+  .sc-orig h4, .sc-orig .score-pct { color: #34D399; }
+  .sc-orig .score-bar-fill { background: #34D399; width: 15%; }
+
+  /* ── JOURNEY ROAD ── */
+  .journey-section {
+    background: var(--navy);
+    padding: 80px 20px;
+  }
+
+  .journey-road {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .road-line {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    bottom: 40px;
+    width: 3px;
+    background: linear-gradient(180deg, rgba(167,139,250,0.5), rgba(245,166,35,0.5), rgba(78,205,196,0.5), rgba(232,97,74,0.5), rgba(52,211,153,0.8));
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .road-milestone {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .road-milestone:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .milestone-dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    position: relative;
+    left: calc(50% - 25px);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .road-milestone:nth-child(odd) .milestone-dot { margin-left: auto; }
+  .road-milestone:nth-child(even) .milestone-dot { margin-right: auto; }
+
+  .milestone-content {
+    flex: 1;
+    padding: 20px 22px;
+    border-radius: 14px;
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    max-width: 380px;
+  }
+
+  .milestone-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .milestone-content p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  /* ── TOOLS & PLATFORMS ── */
+  .tools-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .tool-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .tool-card:hover { transform: translateY(-4px); }
+
+  .tool-card .t-icon { font-size: 36px; margin-bottom: 10px; }
+
+  .tool-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .tool-card p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.4;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #060D18;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.6;
+  }
+
+  .footer .urdu-footer {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 16px;
+    color: rgba(255,255,255,0.4);
+    direction: rtl;
+    margin-top: 14px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .transform-grid {
+      grid-template-columns: 1fr;
+    }
+    .transform-arrow { flex-direction: row; }
+
+    .phase-block {
+      grid-template-columns: 1fr;
+    }
+    .phase-meta { position: static; }
+
+    .idbcc-visual::before { left: 20px; }
+    .idbcc-row { grid-template-columns: 44px 1fr; gap: 14px; }
+    .idbcc-letter { width: 44px; height: 44px; font-size: 18px; }
+
+    .scoring-grid { grid-template-columns: 1fr; }
+
+    .nine-parts { grid-template-columns: 1fr 1fr; }
+
+    .road-line { left: 24px; }
+    .road-milestone, .road-milestone:nth-child(even) { flex-direction: column; align-items: flex-start; padding-left: 60px; }
+    .milestone-dot { position: absolute; left: 0; top: 0; width: 40px; height: 40px; }
+    .milestone-content { max-width: 100%; }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
+  <div class="hero-badge">📚 KT AutomateX Education — Course Blueprint</div>
+  <h1>Competitive Essay<span>Master Course</span></h1>
+  <p class="hero-urdu">مقابلہ مضمون نویسی — مکمل تربیتی نصاب</p>
+  <p class="hero-sub">A complete, structured journey from blank-page fear to competition-winning confidence — designed for Pakistani high school students learning through WhatsApp, Google Classroom, and guided practice.</p>
+
+  <div class="promise-strip">
+    <div class="promise-node">
+      <div class="icon">😰</div>
+      <div class="label">Blank Page Fear</div>
+    </div>
+    <div class="promise-arrow">→</div>
+    <div class="promise-node">
+      <div class="icon">🏗️</div>
+      <div class="label">Learn Structure</div>
+    </div>
+    <div class="promise-arrow">→</div>
+    <div class="promise-node">
+      <div class="icon">✍️</div>
+      <div class="label">Practice Skills</div>
+    </div>
+    <div class="promise-arrow">→</div>
+    <div class="promise-node">
+      <div class="icon">🔍</div>
+      <div class="label">Master Types</div>
+    </div>
+    <div class="promise-arrow">→</div>
+    <div class="promise-node">
+      <div class="icon">⏱️</div>
+      <div class="label">Timed Drills</div>
+    </div>
+    <div class="promise-arrow">→</div>
+    <div class="promise-node">
+      <div class="icon">🏆</div>
+      <div class="label">Competition Ready</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll to explore</span>
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- ══════════════════ TRANSFORMATION ══════════════════ -->
+<div class="divider"></div>
+<section class="transform-section">
+  <div style="max-width:1100px; margin:0 auto; padding:0 20px 40px;">
+    <div class="section-label">Your Journey</div>
+    <h2 class="section-title">Where You Start — <span>Where You Finish</span></h2>
+    <p class="section-sub">This is not just about writing essays. It is about training your mind to think clearly, argue confidently, and express powerfully — in any topic, under any time pressure.</p>
+  </div>
+
+  <div class="transform-grid reveal">
+    <div class="transform-card before">
+      <h3>😰 Day One — Before</h3>
+      <ul class="transform-list">
+        <li><span class="dot"></span>Topic appears — mind goes completely blank</li>
+        <li><span class="dot"></span>No idea how to start or what structure to follow</li>
+        <li><span class="dot"></span>Uses the same basic vocabulary repeatedly</li>
+        <li><span class="dot"></span>Introduction is weak — no hook or clear argument</li>
+        <li><span class="dot"></span>Paragraphs go off-topic and feel disconnected</li>
+        <li><span class="dot"></span>No time management — runs out or rushes at the end</li>
+        <li><span class="dot"></span>Conclusion simply repeats the introduction</li>
+        <li><span class="dot"></span>Makes grammar and spelling errors under pressure</li>
+      </ul>
+    </div>
+
+    <div class="transform-arrow">
+      <div class="arrow-circle">🚀</div>
+      <div class="arrow-label">THIS<br>COURSE</div>
+    </div>
+
+    <div class="transform-card after">
+      <h3>🏆 Final Phase — After</h3>
+      <ul class="transform-list">
+        <li><span class="dot"></span>Reads any topic and generates ideas within 2 minutes</li>
+        <li><span class="dot"></span>Writes using the IDBCC framework with confidence</li>
+        <li><span class="dot"></span>Uses advanced vocabulary and rhetorical devices naturally</li>
+        <li><span class="dot"></span>Opens with a powerful hook that grabs the judge's attention</li>
+        <li><span class="dot"></span>Every paragraph is focused, linked, and purposeful</li>
+        <li><span class="dot"></span>Manages 40 minutes with a strict Plan-Write-Review strategy</li>
+        <li><span class="dot"></span>Writes original, memorable conclusions that leave impact</li>
+        <li><span class="dot"></span>Self-checks for errors in 5 minutes before submission</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SLOs ══════════════════ -->
+<div class="divider"></div>
+<section class="slo-section">
+  <div style="max-width:1100px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Student Learning Outcomes</div>
+    <h2 class="section-title">What You Will <span>Learn & Be Able To Do</span></h2>
+    <p class="section-sub">By the end of this course, every student will have mastered these six core abilities. These are not just goals — they are guarantees if you complete every task.</p>
+  </div>
+
+  <div class="slo-grid reveal">
+    <div class="slo-card c1">
+      <div class="slo-icon">🏗️</div>
+      <h4>SLO 1 — Master One Universal Structure</h4>
+      <p>Apply the IDBCC framework to write any essay on any topic with a clear, logical, and complete structure every time.</p>
+      <span class="urdu-note">کسی بھی موضوع پر منظم مضمون لکھنا</span>
+    </div>
+    <div class="slo-card c2">
+      <div class="slo-icon">💡</div>
+      <h4>SLO 2 — Generate Ideas Rapidly</h4>
+      <p>Use the CPSE brainstorming method to produce relevant, original ideas within 2 minutes of reading any competition topic.</p>
+      <span class="urdu-note">دو منٹ میں خیالات پیدا کرنا</span>
+    </div>
+    <div class="slo-card c3">
+      <div class="slo-icon">✨</div>
+      <h4>SLO 3 — Write with Impact</h4>
+      <p>Craft powerful hooks, strong thesis statements, and memorable conclusions using rhetorical devices and elevated vocabulary.</p>
+      <span class="urdu-note">مؤثر اور یادگار جملے لکھنا</span>
+    </div>
+    <div class="slo-card c4">
+      <div class="slo-icon">🔤</div>
+      <h4>SLO 4 — Use Language Precisely</h4>
+      <p>Replace basic words with accurate, advanced vocabulary. Write sentences of varied length and style to engage the reader.</p>
+      <span class="urdu-note">بہتر الفاظ اور جملوں کا استعمال</span>
+    </div>
+    <div class="slo-card c5">
+      <div class="slo-icon">⏱️</div>
+      <h4>SLO 5 — Manage Time Under Pressure</h4>
+      <p>Complete a full competition essay in 40 minutes using the Plan-Write-Review strategy without running out of time.</p>
+      <span class="urdu-note">وقت کے اندر مکمل مضمون لکھنا</span>
+    </div>
+    <div class="slo-card c6">
+      <div class="slo-icon">📊</div>
+      <h4>SLO 6 — Think Like a Judge</h4>
+      <p>Understand and maximise all four marking criteria — Content, Organisation, Language, and Originality — in every essay.</p>
+      <span class="urdu-note">جج کی طرح سوچنا اور نمبر بڑھانا</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ HOW YOU WILL LEARN ══════════════════ -->
+<div class="divider"></div>
+<section class="delivery-section">
+  <div style="max-width:1100px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Teaching & Learning Method</div>
+    <h2 class="section-title">How You Will <span>Learn</span></h2>
+    <p class="section-sub">This course is designed for students learning through a guardian's phone. Every lesson is short, visual, bilingual, and built around one skill at a time.</p>
+  </div>
+
+  <div class="delivery-grid reveal">
+    <div class="delivery-card">
+      <div class="d-icon">📱</div>
+      <h4>WhatsApp Lessons</h4>
+      <p>Short bilingual messages, visual infographics, and voice note explanations in Urdu and English delivered to your group</p>
+    </div>
+    <div class="delivery-card">
+      <div class="d-icon">🖥️</div>
+      <h4>Google Classroom</h4>
+      <p>Full lesson notes, model essays, vocabulary charts, and all reference materials stored and accessible anytime</p>
+    </div>
+    <div class="delivery-card">
+      <div class="d-icon">📝</div>
+      <h4>Google Forms</h4>
+      <p>All tasks, quizzes, and practice drills submitted through simple forms — no printing, no physical submission needed</p>
+    </div>
+    <div class="delivery-card">
+      <div class="d-icon">📊</div>
+      <h4>Google Sheets Tracker</h4>
+      <p>Your name, scores, and progress tracked every week so you always know how you are doing and where to improve</p>
+    </div>
+    <div class="delivery-card">
+      <div class="d-icon">🎙️</div>
+      <h4>Urdu Voice Notes</h4>
+      <p>Every concept explained in Urdu via voice note so language is never a barrier to understanding the lesson</p>
+    </div>
+    <div class="delivery-card">
+      <div class="d-icon">👥</div>
+      <h4>Peer Review</h4>
+      <p>Students mark each other's work using simple rubrics — learning to evaluate is as powerful as learning to write</p>
+    </div>
+  </div>
+
+  <div class="rhythm-box reveal" style="margin-top:40px;">
+    <h3>📅 Weekly Learning Rhythm</h3>
+    <div class="rhythm-row">
+      <div class="rhythm-day">SUNDAY</div>
+      <div class="rhythm-action">New lesson drops — bilingual infographic + Urdu voice note explanation of the week's skill</div>
+      <div class="rhythm-tag tag-wa">WhatsApp</div>
+    </div>
+    <div class="rhythm-row">
+      <div class="rhythm-day">TUESDAY</div>
+      <div class="rhythm-action">Model examples shared — "Spot It" activity to identify the skill in a real sample essay</div>
+      <div class="rhythm-tag tag-wa">WhatsApp</div>
+    </div>
+    <div class="rhythm-row">
+      <div class="rhythm-day">THURSDAY</div>
+      <div class="rhythm-action">Task assigned — "Build It" writing task submitted through Google Form link</div>
+      <div class="rhythm-tag tag-gf">Google Form</div>
+    </div>
+    <div class="rhythm-row">
+      <div class="rhythm-day">SATURDAY</div>
+      <div class="rhythm-action">Submission deadline — teacher reviews all 6 responses, records scores in tracker</div>
+      <div class="rhythm-tag tag-gc">Tracker</div>
+    </div>
+    <div class="rhythm-row">
+      <div class="rhythm-day">SUNDAY</div>
+      <div class="rhythm-action">Personal feedback shared via voice note + best examples shown in group (with permission)</div>
+      <div class="rhythm-tag tag-fb">Feedback</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ IDBCC FRAMEWORK ══════════════════ -->
+<div class="divider"></div>
+<section class="framework-section">
+  <div style="max-width:900px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Your Core Tool</div>
+    <h2 class="section-title">The <span>IDBCC Framework</span></h2>
+    <p class="section-sub">One structure. Works for every topic. Every essay type. Memorise it once — use it for life. This framework is the backbone of the entire course.</p>
+  </div>
+
+  <div class="idbcc-visual reveal">
+    <div class="idbcc-row row-i">
+      <div class="idbcc-letter">I</div>
+      <div class="idbcc-card">
+        <h4>INTRODUCTION — آغاز</h4>
+        <p>The opening paragraph. Grab the judge's attention immediately. Give context. State your argument clearly. Judges decide within the first paragraph whether this essay is special.</p>
+        <div class="parts">
+          <span class="part-tag">🎣 Hook</span>
+          <span class="part-tag">🌍 Context</span>
+          <span class="part-tag">💬 Thesis</span>
+        </div>
+      </div>
+    </div>
+    <div class="idbcc-row row-d">
+      <div class="idbcc-letter">D</div>
+      <div class="idbcc-card">
+        <h4>DEVELOPMENT 1 — پہلی دلیل</h4>
+        <p>Your first supporting argument. State the point. Back it with a real example or fact. Explain why it matters to your thesis. Build your case systematically.</p>
+        <div class="parts">
+          <span class="part-tag">📌 Point</span>
+          <span class="part-tag">📖 Evidence</span>
+          <span class="part-tag">🔗 Explanation</span>
+        </div>
+      </div>
+    </div>
+    <div class="idbcc-row row-b">
+      <div class="idbcc-letter">B</div>
+      <div class="idbcc-card">
+        <h4>BRIDGE — دوسری دلیل</h4>
+        <p>Your second argument OR a counter-argument you then defeat. Use transition words: "However," "Furthermore," "On the other hand." Show the judge you see multiple angles.</p>
+        <div class="parts">
+          <span class="part-tag">🔄 Transition</span>
+          <span class="part-tag">📌 Point</span>
+          <span class="part-tag">📖 Evidence</span>
+        </div>
+      </div>
+    </div>
+    <div class="idbcc-row row-c1">
+      <div class="idbcc-letter">C</div>
+      <div class="idbcc-card">
+        <h4>CLIMAX — سب سے مضبوط دلیل</h4>
+        <p>Your STRONGEST point goes here — saved for maximum impact. This is where deep thinking is rewarded. Use your most powerful example. Leave the judge impressed.</p>
+        <div class="parts">
+          <span class="part-tag">💥 Strongest Point</span>
+          <span class="part-tag">🇵🇰 Pakistan Example</span>
+          <span class="part-tag">🔗 Explanation</span>
+        </div>
+      </div>
+    </div>
+    <div class="idbcc-row row-c2">
+      <div class="idbcc-letter">C</div>
+      <div class="idbcc-card">
+        <h4>CONCLUSION — اختتام</h4>
+        <p>Close with authority. Restate your thesis in new words. Summarise your two best points. End with a sentence the judge will still be thinking about after they put your essay down.</p>
+        <div class="parts">
+          <span class="part-tag">🔁 Restate Thesis</span>
+          <span class="part-tag">📋 Summary</span>
+          <span class="part-tag">🌟 Powerful Close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 Sub-Parts -->
+  <div style="max-width:900px; margin:40px auto 0; padding:0 20px;">
+    <p style="text-align:center; color:rgba(255,255,255,0.4); font-size:13px; margin-bottom:20px; letter-spacing:1px; text-transform:uppercase;">The 9 Individual Skills You Will Master — One at a Time</p>
+  </div>
+
+  <div class="nine-parts reveal">
+    <div class="nine-card np-i" data-part="1">
+      <div class="n-num">SKILL 1 · INTRO</div>
+      <h5>🎣 Hook</h5>
+      <p>Opening sentence that grabs attention immediately</p>
+    </div>
+    <div class="nine-card np-i" data-part="2">
+      <div class="n-num">SKILL 2 · INTRO</div>
+      <h5>🌍 Context</h5>
+      <p>Background information that sets the scene</p>
+    </div>
+    <div class="nine-card np-i" data-part="3">
+      <div class="n-num">SKILL 3 · INTRO</div>
+      <h5>💬 Thesis</h5>
+      <p>Your clear main argument or position</p>
+    </div>
+    <div class="nine-card np-d" data-part="4">
+      <div class="n-num">SKILL 4 · BODY</div>
+      <h5>📌 Point</h5>
+      <p>Clearly stating your argument for each paragraph</p>
+    </div>
+    <div class="nine-card np-d" data-part="5">
+      <div class="n-num">SKILL 5 · BODY</div>
+      <h5>📖 Evidence</h5>
+      <p>Real examples, facts, or events to support the point</p>
+    </div>
+    <div class="nine-card np-d" data-part="6">
+      <div class="n-num">SKILL 6 · BODY</div>
+      <h5>🔗 Explanation</h5>
+      <p>Connecting the evidence back to your thesis</p>
+    </div>
+    <div class="nine-card np-b" data-part="7">
+      <div class="n-num">SKILL 7 · BRIDGE</div>
+      <h5>🔄 Transition</h5>
+      <p>Linking paragraphs and introducing counter-views</p>
+    </div>
+    <div class="nine-card np-c1" data-part="8">
+      <div class="n-num">SKILL 8 · CLIMAX</div>
+      <h5>💥 Strongest Argument</h5>
+      <p>Placing your best point last for maximum judge impact</p>
+    </div>
+    <div class="nine-card np-c2" data-part="9">
+      <div class="n-num">SKILL 9 · CONCLUSION</div>
+      <h5>🌟 Powerful Close</h5>
+      <p>Ending that restates, summarises, and leaves a mark</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ COURSE PHASES ══════════════════ -->
+<div class="divider"></div>
+<section class="phases-section">
+  <div style="max-width:1100px; margin:0 auto; padding-bottom:50px;">
+    <div class="section-label">Course Architecture</div>
+    <h2 class="section-title">The Five <span>Learning Phases</span></h2>
+    <p class="section-sub">Each phase builds on the one before it. You will never move to a new phase without confidence in the current one. Progress is tracked — no student is left behind.</p>
+  </div>
+
+  <!-- PHASE 0 -->
+  <div class="phase-block ph0 reveal">
+    <div class="phase-meta">
+      <div class="phase-badge">Phase 0</div>
+      <h2>Orientation & Foundation</h2>
+      <p class="phase-desc">Before writing a single word, students understand the battlefield — what judges want, how marks are awarded, and what this course will give them.</p>
+      <div class="phase-goal">
+        🎯 <strong>Goal:</strong> Every student submits the intake form, knows the IDBCC name, and understands the 4 marking criteria before Week 1 begins.
+      </div>
+    </div>
+    <div class="phase-content">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">P0·1</div>
+          <div class="unit-title">
+            Welcome & Course Introduction
+            <span class="urdu-small">خوش آمدید اور نصاب کا تعارف</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📱</span> WhatsApp welcome message — who the teacher is, what this course is, why it matters for competition</div>
+            <div class="step-row"><span class="step-icon">🎙️</span> Urdu voice note — personal introduction, warm and encouraging tone for nervous students</div>
+            <div class="step-row"><span class="step-icon">📝</span> Intake Google Form — name, preferred language, phone access days, current essay confidence level</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">P0·2</div>
+          <div class="unit-title">
+            What Do Judges Actually Look For?
+            <span class="urdu-small">جج کیا دیکھتے ہیں؟</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">🖼️</span> Marking criteria infographic — Content 30%, Language 30%, Organisation 25%, Originality 15%</div>
+            <div class="step-row"><span class="step-icon">🎙️</span> Voice note explaining each criterion in Urdu with a real example of what impresses judges</div>
+            <div class="step-row"><span class="step-icon">📝</span> Quiz: "Which criterion is being described?" — 4-question Google Form to confirm understanding</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">P0·3</div>
+          <div class="unit-title">
+            Introduction to IDBCC — The One Framework
+            <span class="urdu-small">IDBCC فریم ورک کا تعارف</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">🖼️</span> IDBCC visual map — full colour infographic showing all 5 parts and their purpose</div>
+            <div class="step-row"><span class="step-icon">🎙️</span> Voice note: "Think of this like a house — Introduction is the door, body paragraphs are the rooms, conclusion is the exit sign"</div>
+            <div class="step-row"><span class="step-icon">💬</span> WhatsApp task: Students reply with what IDBCC stands for from memory — no looking back</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-block ph1 reveal">
+    <div class="phase-meta">
+      <div class="phase-badge">Phase 1</div>
+      <h2>Component Mastery — 9 Skills</h2>
+      <p class="phase-desc">The core of the course. Each of the 9 essay components is taught as a standalone skill — defined, modelled, identified, then written. One skill at a time, one week at a time.</p>
+      <div class="phase-goal">
+        🎯 <strong>Goal:</strong> Students can write each of the 9 components in isolation with confidence and accuracy before assembling a full paragraph.
+      </div>
+    </div>
+    <div class="phase-content">
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·1</div>
+          <div class="unit-title">
+            The Hook — Your Opening Weapon
+            <span class="urdu-small">ہک — پہلا جملہ جو سب کو روک دے</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Definition & types: Quote Hook, Bold Statement Hook, Rhetorical Question Hook — explained with Pakistani examples</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Share 3 essay openings — students identify which type of hook is used (Google Form)</div>
+            <div class="step-row"><span class="step-icon">🚫</span> Forbidden Phrases lesson: "Since the dawn of time..." — why clichés lose marks immediately</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Given a topic, write one hook sentence of each type — submitted via Google Form</div>
+            <div class="step-row"><span class="step-icon">📚</span> Memory Bank: 9 strong hook sentences to memorise and adapt for any topic</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·2</div>
+          <div class="unit-title">
+            Context — Setting the Scene
+            <span class="urdu-small">پس منظر — موضوع کو سمجھانا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> What context does: bridges hook to thesis, narrows the topic, shows the student knows the subject</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Identify the context sentences in 2 sample introductions</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Write a 2-sentence context for a given topic using the Pakistan angle formula</div>
+            <div class="step-row"><span class="step-icon">👥</span> Peer Check: Does the context connect naturally from the hook to the thesis? Students mark each other</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·3</div>
+          <div class="unit-title">
+            The Thesis — Your Essay's Spine
+            <span class="urdu-small">مرکزی دلیل — مضمون کی روح</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> What a thesis is and is NOT — clear argument vs vague statement (with comparison examples)</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Which of these 4 sentences is a strong thesis? Explain why (Google Form)</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Write a thesis for 3 different topics using the template "Although X, Y because Z"</div>
+            <div class="step-row"><span class="step-icon">📝</span> Quiz: Rewrite a weak thesis into a strong one — scored and returned with feedback</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·4</div>
+          <div class="unit-title">
+            Point — State Your Argument Clearly
+            <span class="urdu-small">بات کہنا — واضح اور براہ راست</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> How to open a body paragraph: topic sentence = one clear point, not a story</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Which sentence is a point and which is evidence? Sort them correctly</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Write opening point sentences for 3 paragraph topics on Social Media</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·5</div>
+          <div class="unit-title">
+            Evidence — Prove It With Examples
+            <span class="urdu-small">ثبوت — مثال سے بات ثابت کرنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Types of evidence: Pakistan-specific examples, global examples, statistics, personal observation</div>
+            <div class="step-row"><span class="step-icon">🇵🇰</span> Pakistan Example Bank: 20 ready-to-use real-life examples covering all 7 common themes</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Add evidence to 3 point sentences written in Skill 1·4 — complete the point-evidence pair</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·6</div>
+          <div class="unit-title">
+            Explanation — Connect Evidence to Thesis
+            <span class="urdu-small">وضاحت — مثال کو مرکزی دلیل سے جوڑنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> The "So what?" principle — every piece of evidence must be explained, not just stated</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Which paragraph has explanation and which just lists facts? What is missing?</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Add explanation sentences to complete the Point-Evidence-Explanation triplet</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·7</div>
+          <div class="unit-title">
+            Transitions & Bridge — Linking Your Ideas
+            <span class="urdu-small">ربط — خیالات کو جوڑنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> 10 essential transition words categorised: Adding, Contrasting, Concluding — with usage rules</div>
+            <div class="step-row"><span class="step-icon">🚫</span> Forbidden: Starting every paragraph with "Also" — why it signals weak writing</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Rewrite 5 choppy sentences using correct transitions to create smooth flow</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·8</div>
+          <div class="unit-title">
+            The Climax — Saving Your Best for Last
+            <span class="urdu-small">عروج — سب سے اہم بات آخر میں</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Why the strongest argument goes third — the law of recency in judge psychology</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Rank 3 arguments from weakest to strongest — explain your reasoning</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Write a climax paragraph using a specific Pakistan example that is original and vivid</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">1·9</div>
+          <div class="unit-title">
+            The Conclusion — Close with Power
+            <span class="urdu-small">اختتام — یادگار انداز میں بند کرنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> 3 conclusion techniques: Call to Action, Full Circle, Vision Statement — with Pakistani examples</div>
+            <div class="step-row"><span class="step-icon">🚫</span> Rule: Never copy your introduction word-for-word — rephrase, do not repeat</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Build It: Write conclusions using all 3 techniques for the same topic — choose your favourite</div>
+            <div class="step-row"><span class="step-icon">📝</span> Phase 1 End Quiz: 9-question quiz — one question per skill to confirm mastery before Phase 2</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="phase-connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-block ph2 reveal">
+    <div class="phase-meta">
+      <div class="phase-badge">Phase 2</div>
+      <h2>Paragraph & Full Essay Assembly</h2>
+      <p class="phase-desc">Students now combine their 9 mastered skills into complete paragraphs, then into a full competition essay. The focus shifts from components to cohesion.</p>
+      <div class="phase-goal">
+        🎯 <strong>Goal:</strong> Students write a complete, structured 5-paragraph essay using IDBCC from start to finish — correctly and without prompting.
+      </div>
+    </div>
+    <div class="phase-content">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">2·1</div>
+          <div class="unit-title">
+            Building the Introduction Paragraph
+            <span class="urdu-small">پہلا پیراگراف — Hook + Context + Thesis</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">🔗</span> Combining Skills 1+2+3 into one flowing introduction paragraph — smooth, not choppy</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Annotated model: colour-coded introduction showing Hook (purple), Context (gold), Thesis (green)</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Write a full introduction for an assigned topic — peer review using a 3-point checklist</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">2·2</div>
+          <div class="unit-title">
+            Building the Body Paragraphs
+            <span class="urdu-small">درمیانی پیراگراف — Point + Evidence + Explanation</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">🔗</span> Combining Skills 4+5+6 across D, B, and Climax paragraphs — using correct transitions between each</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Model essay with body paragraphs annotated — identifying Point, Evidence, Explanation in each</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Write all 3 body paragraphs for a given topic — arrange from weakest to strongest argument</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">2·3</div>
+          <div class="unit-title">
+            First Complete Essay Attempt
+            <span class="urdu-small">پہلا مکمل مضمون</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">⏱️</span> Timed: 40 minutes — Plan 5 min, Write 30 min, Review 5 min. Strictly followed</div>
+            <div class="step-row"><span class="step-icon">📋</span> Pre-submission checklist applied — students self-check before submitting</div>
+            <div class="step-row"><span class="step-icon">📊</span> Teacher marks against all 4 criteria. Full written feedback returned within 48 hours</div>
+            <div class="step-row"><span class="step-icon">📈</span> Scores entered in Google Sheets tracker — baseline established for each student</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-block ph3 reveal">
+    <div class="phase-meta">
+      <div class="phase-badge">Phase 3</div>
+      <h2>Essay Types — Tone Mastery</h2>
+      <p class="phase-desc">With structure locked in, students now learn how to adjust their tone, vocabulary, and approach for each of the four competition essay types.</p>
+      <div class="phase-goal">
+        🎯 <strong>Goal:</strong> Students read a topic and instantly identify which essay type fits best, then write confidently in that mode.
+      </div>
+    </div>
+    <div class="phase-content">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">3·1</div>
+          <div class="unit-title">
+            Argumentative — Prove Your Point
+            <span class="urdu-small">دلیلی مضمون — منطق سے قائل کرنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Tone: Formal, confident, evidence-led. Vocabulary: "demonstrates," "it is evident," "one cannot deny"</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Identify argumentative language vs narrative language in two sample paragraphs</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Write a full argumentative essay — most common type in Pakistani inter-school competitions</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">3·2</div>
+          <div class="unit-title">
+            Narrative — Tell a Story With Purpose
+            <span class="urdu-small">بیانیہ مضمون — کہانی کے ذریعے سکھانا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Tone: Personal, engaging, first-person. Structure stays IDBCC — story arc mapped onto it</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: Which parts of a narrative essay still use the IDBCC structure? Mark them</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Write a narrative essay on a personal experience topic</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">3·3</div>
+          <div class="unit-title">
+            Descriptive — Paint With Words
+            <span class="urdu-small">وضاحتی مضمون — الفاظ سے تصویر بنانا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Tone: Sensory, expressive. Use of simile, metaphor, personification. Show, don't tell</div>
+            <div class="step-row"><span class="step-icon">🔤</span> Sensory vocabulary list: sight, sound, smell, touch, taste — applied to Pakistani settings</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Describe a scene or place — IDBCC structure with descriptive language throughout</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">3·4</div>
+          <div class="unit-title">
+            Reflective — Share Personal Growth
+            <span class="urdu-small">تاملی مضمون — اپنے تجربے سے سیکھنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Tone: Honest, thoughtful, introspective. Links personal experience to a broader insight</div>
+            <div class="step-row"><span class="step-icon">🔍</span> Spot It: What makes this essay reflective and not just narrative? Identify the key difference</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Write a reflective essay on a lesson learned — includes before/after insight structure</div>
+            <div class="step-row"><span class="step-icon">📝</span> Phase 3 Type Quiz: Given 4 topics, select the best essay type for each and justify — scored</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-connector"><div class="connector-line"></div><div class="connector-dot"></div><div class="connector-line"></div></div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-block ph4 reveal">
+    <div class="phase-meta">
+      <div class="phase-badge">Phase 4</div>
+      <h2>Competition Simulation & Mastery</h2>
+      <p class="phase-desc">The final phase replicates real competition conditions. Random topics, cold writing, peer marking, leaderboard, and teacher-grade feedback on every attempt.</p>
+      <div class="phase-goal">
+        🎯 <strong>Goal:</strong> Students sit a full simulated competition and receive a final score and written certificate of completion from the teacher.
+      </div>
+    </div>
+    <div class="phase-content">
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">4·1</div>
+          <div class="unit-title">
+            Vocabulary & Language Mastery Sprint
+            <span class="urdu-small">الفاظ اور زبان کی مہارت</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📖</span> Full Vocabulary Upgrade Chart — basic to good to strong word replacements</div>
+            <div class="step-row"><span class="step-icon">🔧</span> Sentence variety drill: mix short punchy sentences with long analytical ones in one paragraph</div>
+            <div class="step-row"><span class="step-icon">✍️</span> Vocabulary Swap task: take any paragraph written in Phase 1 — upgrade every basic word</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">4·2</div>
+          <div class="unit-title">
+            Random Topic Sprints & Brainstorm Speed Training
+            <span class="urdu-small">کسی بھی موضوع پر فوری سوچنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">⏱️</span> Sprint drill: Random topic — CPSE brainstorm map completed in 2 minutes flat</div>
+            <div class="step-row"><span class="step-icon">🗺️</span> 7 Competition Themes covered: Education, Technology, Society, Environment, Ethics, Patriotism, Health</div>
+            <div class="step-row"><span class="step-icon">🇵🇰</span> Universal Angle Formula: Individual impact + Society impact + Nation impact — applied to every topic</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">4·3</div>
+          <div class="unit-title">
+            Peer Marking & Judge Mindset
+            <span class="urdu-small">ایک دوسرے کی جانچ — جج کی طرح سوچنا</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">📊</span> Students mark two classmates' essays using the 4-criteria Google Form rubric</div>
+            <div class="step-row"><span class="step-icon">💬</span> Must write one strength and one improvement for each essay they mark — structured feedback</div>
+            <div class="step-row"><span class="step-icon">🔄</span> Scores compared: peer mark vs teacher mark — discuss any large differences as a group</div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-header">
+          <div class="unit-num">4·4</div>
+          <div class="unit-title">
+            Final Simulated Competition — Full Exam Conditions
+            <span class="urdu-small">حتمی مقابلہ — امتحانی ماحول</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div class="lesson-steps">
+            <div class="step-row"><span class="step-icon">🏆</span> Surprise topic revealed on the day — no advance preparation. 40-minute timer. No notes</div>
+            <div class="step-row"><span class="step-icon">📋</span> Pre-submission checklist applied by student before final submission via Google Form</div>
+            <div class="step-row"><span class="step-icon">📊</span> Teacher marks all 4 criteria. Final scores entered. Personal feedback audio note for every student</div>
+            <div class="step-row"><span class="step-icon">🎖️</span> Course completion: written feedback report + student score summary shared with guardian</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════ ESSAY TYPES VISUAL ══════════════════ -->
+<div class="divider"></div>
+<section style="background:#060D18; padding:80px 20px;">
+  <div style="max-width:1100px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Phase 3 Reference</div>
+    <h2 class="section-title">Four Essay Types — <span>One Framework</span></h2>
+    <p class="section-sub">The IDBCC structure never changes. Only the tone, vocabulary, and focus shift. Taught in this exact order — from most structured to most personal.</p>
+  </div>
+
+  <div class="essay-types reveal">
+    <div class="essay-type-card et-arg" data-type="A">
+      <h4>Argumentative</h4>
+      <span class="et-urdu">دلیلی مضمون</span>
+      <p>Prove a position using logic, evidence, and counter-arguments. The most common type in Pakistani inter-school competitions. Taught first.</p>
+      <div class="et-tags">
+        <span class="et-tag">Formal tone</span>
+        <span class="et-tag">Evidence-led</span>
+        <span class="et-tag">Confident</span>
+        <span class="et-tag">Taught 1st</span>
+      </div>
+    </div>
+    <div class="essay-type-card et-narr" data-type="N">
+      <h4>Narrative</h4>
+      <span class="et-urdu">بیانیہ مضمون</span>
+      <p>Tell a personal story with a clear lesson or message. IDBCC maps onto story arc — beginning, conflict, resolution, reflection.</p>
+      <div class="et-tags">
+        <span class="et-tag">First person</span>
+        <span class="et-tag">Engaging</span>
+        <span class="et-tag">Personal</span>
+        <span class="et-tag">Taught 2nd</span>
+      </div>
+    </div>
+    <div class="essay-type-card et-desc" data-type="D">
+      <h4>Descriptive</h4>
+      <span class="et-urdu">وضاحتی مضمون</span>
+      <p>Paint a vivid picture using sensory language, similes, and metaphors. Show the reader — don't just tell them.</p>
+      <div class="et-tags">
+        <span class="et-tag">Sensory</span>
+        <span class="et-tag">Expressive</span>
+        <span class="et-tag">Show don't tell</span>
+        <span class="et-tag">Taught 3rd</span>
+      </div>
+    </div>
+    <div class="essay-type-card et-refl" data-type="R">
+      <h4>Reflective</h4>
+      <span class="et-urdu">تاملی مضمون</span>
+      <p>Share a personal experience and what it taught you. Links individual insight to a broader truth about life, society, or growth.</p>
+      <div class="et-tags">
+        <span class="et-tag">Honest</span>
+        <span class="et-tag">Thoughtful</span>
+        <span class="et-tag">Insightful</span>
+        <span class="et-tag">Taught 4th</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="teach-order reveal">
+    <div class="teach-order-item">
+      <div class="to-step">
+        <div class="to-num" style="background:rgba(245,166,35,0.2); color:var(--gold);">1st</div>
+        <div class="to-label">Argumentative</div>
+      </div>
+    </div>
+    <div class="to-arr">→</div>
+    <div class="teach-order-item">
+      <div class="to-step">
+        <div class="to-num" style="background:rgba(167,139,250,0.2); color:#A78BFA;">2nd</div>
+        <div class="to-label">Narrative</div>
+      </div>
+    </div>
+    <div class="to-arr">→</div>
+    <div class="teach-order-item">
+      <div class="to-step">
+        <div class="to-num" style="background:rgba(78,205,196,0.2); color:var(--mint);">3rd</div>
+        <div class="to-label">Descriptive</div>
+      </div>
+    </div>
+    <div class="to-arr">→</div>
+    <div class="teach-order-item">
+      <div class="to-step">
+        <div class="to-num" style="background:rgba(52,211,153,0.2); color:#34D399;">4th</div>
+        <div class="to-label">Reflective</div>
+      </div>
+    </div>
+    <div style="margin-left:20px; padding-left:20px; border-left:1px solid rgba(255,255,255,0.1); font-size:12px; color:rgba(255,255,255,0.35); max-width:180px; line-height:1.5;">Most structured → most personal. Structure confidence comes first.</div>
+  </div>
+</section>
+
+<!-- ══════════════════ SCORING ══════════════════ -->
+<div class="divider"></div>
+<section class="scoring-section">
+  <div style="max-width:900px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Know the Rules</div>
+    <h2 class="section-title">How Judges <span>Award Marks</span></h2>
+    <p class="section-sub">Understanding how marks are distributed is like seeing the exam paper before you sit it. Every lesson in this course targets one or more of these four criteria directly.</p>
+  </div>
+  <div class="scoring-grid reveal">
+    <div class="score-card sc-content">
+      <h4>Content</h4>
+      <div class="score-pct">30%</div>
+      <div class="score-bar-bg"><div class="score-bar-fill"></div></div>
+      <p>Relevance, depth of ideas, real-life examples, and originality of thinking. Using a specific Pakistani example scores higher than a generic global statement.</p>
+    </div>
+    <div class="score-card sc-lang">
+      <h4>Language</h4>
+      <div class="score-pct">30%</div>
+      <div class="score-bar-bg"><div class="score-bar-fill"></div></div>
+      <p>Vocabulary precision, grammatical accuracy, sentence variety, and rhetorical devices. Short punchy sentences mixed with longer analytical ones impress judges.</p>
+    </div>
+    <div class="score-card sc-org">
+      <h4>Organisation</h4>
+      <div class="score-pct">25%</div>
+      <div class="score-bar-bg"><div class="score-bar-fill"></div></div>
+      <p>Clear structure, logical paragraph flow, and smooth transitions. The IDBCC framework directly targets and maximises this entire criterion.</p>
+    </div>
+    <div class="score-card sc-orig">
+      <h4>Originality</h4>
+      <div class="score-pct">15%</div>
+      <div class="score-bar-bg"><div class="score-bar-fill"></div></div>
+      <p>Fresh angle, creative opening, memorable conclusion. Avoid clichés. Judges read hundreds of essays — a specific local reference immediately stands out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TOOLS ══════════════════ -->
+<div class="divider"></div>
+<section style="background:var(--navy); padding:80px 20px;">
+  <div style="max-width:900px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Platforms & Tools</div>
+    <h2 class="section-title">Where <span>Learning Happens</span></h2>
+    <p class="section-sub">Every platform has one clear role. No confusion. No overlap.</p>
+  </div>
+  <div class="tools-grid reveal">
+    <div class="tool-card">
+      <div class="t-icon">📱</div>
+      <h4>WhatsApp Group</h4>
+      <p>Lesson delivery, infographics, voice notes, reminders, and peer sharing</p>
+    </div>
+    <div class="tool-card">
+      <div class="t-icon">🏫</div>
+      <h4>Google Classroom</h4>
+      <p>Full lesson archive, model essays, vocabulary charts — reference hub</p>
+    </div>
+    <div class="tool-card">
+      <div class="t-icon">📝</div>
+      <h4>Google Forms</h4>
+      <p>All task submissions, quizzes, and peer review rubrics — simple, one-click</p>
+    </div>
+    <div class="tool-card">
+      <div class="t-icon">📊</div>
+      <h4>Google Sheets</h4>
+      <p>Student progress tracker — name, scores, feedback, and cumulative record</p>
+    </div>
+    <div class="tool-card">
+      <div class="t-icon">🎙️</div>
+      <h4>Voice Notes (Urdu)</h4>
+      <p>Personal teacher feedback and lesson explanations in Urdu — no language barrier</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ JOURNEY ROAD ══════════════════ -->
+<div class="divider"></div>
+<section class="journey-section">
+  <div style="max-width:900px; margin:0 auto; padding-bottom:40px;">
+    <div class="section-label">Your Complete Path</div>
+    <h2 class="section-title">The Full <span>Learning Journey</span></h2>
+    <p class="section-sub">From the very first message you receive to the moment you sit a real competition — this is every milestone on your path.</p>
+  </div>
+
+  <div style="max-width:700px; margin:0 auto; position:relative; padding-left:60px;" class="reveal">
+    <div style="position:absolute; left:20px; top:10px; bottom:10px; width:3px; background:linear-gradient(180deg,#A78BFA,#F5A623,#4ECDC4,#E8614A,#34D399,#F5A623); border-radius:2px;"></div>
+
+    <div style="position:relative; margin-bottom:36px;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:rgba(167,139,250,0.2); border:2px solid #A78BFA; display:flex; align-items:center; justify-content:center; font-size:18px;">📍</div>
+      <div style="background:var(--navy-mid); border:1px solid rgba(167,139,250,0.2); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:#A78BFA; margin-bottom:4px;">YOU ARE HERE — DAY ONE</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">Blank Page. No Structure. No Confidence.</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.45);">Topics feel impossible. You don't know where to start. Every opening sentence feels wrong.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; margin-bottom:36px;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:rgba(167,139,250,0.15); border:2px solid #A78BFA; display:flex; align-items:center; justify-content:center; font-size:18px;">🧭</div>
+      <div style="background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:#A78BFA; margin-bottom:4px;">PHASE 0</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">You understand the map before the journey begins</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.45);">You know how judges mark. You know the IDBCC framework exists. You know the name of every part of a competition essay.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; margin-bottom:36px;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:rgba(245,166,35,0.15); border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-size:18px;">🔨</div>
+      <div style="background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:4px;">PHASE 1 — 9 SKILLS</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">You can write every part of an essay in isolation</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.45);">Hook, context, thesis, point, evidence, explanation, transition, climax, conclusion — each mastered as its own skill. No blank moments.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; margin-bottom:36px;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:rgba(78,205,196,0.15); border:2px solid var(--mint); display:flex; align-items:center; justify-content:center; font-size:18px;">📄</div>
+      <div style="background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--mint); margin-bottom:4px;">PHASE 2 — ASSEMBLY</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">You write your first complete timed essay</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.45);">All 9 skills assembled into one coherent 5-paragraph essay. Timed. Checked. Marked. Baseline score recorded.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; margin-bottom:36px;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:rgba(232,97,74,0.15); border:2px solid var(--coral); display:flex; align-items:center; justify-content:center; font-size:18px;">🎭</div>
+      <div style="background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--coral); margin-bottom:4px;">PHASE 3 — ESSAY TYPES</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">You adapt your tone for any essay type</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.45);">Argumentative, Narrative, Descriptive, Reflective. You see a topic and immediately know which type fits and how to adjust.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; margin-bottom:36px;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:rgba(52,211,153,0.15); border:2px solid #34D399; display:flex; align-items:center; justify-content:center; font-size:18px;">⚔️</div>
+      <div style="background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:#34D399; margin-bottom:4px;">PHASE 4 — SIMULATION</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">You perform under real competition pressure</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.45);">Random topics. Cold writing. Peer marking. Full 40-minute simulation. Final score. Personal written feedback report.</p>
+      </div>
+    </div>
+
+    <div style="position:relative;">
+      <div style="position:absolute; left:-48px; top:0; width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--gold),#E8940A); border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-size:18px; box-shadow:0 0 20px rgba(245,166,35,0.4);">🏆</div>
+      <div style="background:rgba(245,166,35,0.07); border:1px solid rgba(245,166,35,0.3); border-radius:12px; padding:18px 20px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:4px;">YOU FINISH HERE</div>
+        <h4 style="font-size:15px; color:var(--white); margin-bottom:4px;">Competition Ready. Confident. Trained.</h4>
+        <p style="font-size:13px; color:rgba(255,255,255,0.55);">Any topic. Any type. 40 minutes. You have a structure that never fails, a vocabulary that impresses, and a mind that generates ideas in 2 minutes. You are ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<div class="divider"></div>
+<footer class="footer">
+  <div class="footer-logo">KT AutomateX Education</div>
+  <p>Competitive Essay Writing — Master Course Blueprint</p>
+  <p style="margin-top:6px;">Designed for Pakistani High School Inter-School Competitions</p>
+  <p style="margin-top:6px; color:rgba(255,255,255,0.2);">Delivered via WhatsApp · Google Classroom · Google Forms · Google Sheets</p>
+  <p class="urdu-footer">ہم مل کر ایک بہتر نسل تیار کریں گے۔ ان شاء اللہ۔</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
